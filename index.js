@@ -23,8 +23,6 @@ function formSubmitClick() {
     }
     console.log("Mail", mail)
 
-
 }
-
 
 
