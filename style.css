@@ -19,10 +19,10 @@ h1 {
     padding: 2vw auto;
     background-color: #cbff65;
     text-align: center;
-    margin:auto ;
+    margin: auto;
 }
 
-.sumbit {
+.submit {
     color: #000;
     background-color: #ff8b22;
     padding: 7px 23px;
@@ -31,4 +31,14 @@ h1 {
     font-size: 15px;
     font-weight: 600;
     cursor: pointer;
+}
+
+.submit :hover {
+    opacity: .5
+}
+
+#name,#password{
+    border-radius: 5px;
+    width: 20vw;
+    height: 2vw;
 }
