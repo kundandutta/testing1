@@ -9,8 +9,26 @@ var formObj = {
     "address": "",
     "resume": ""
 }
-
+var checkBoxArr = [];
+// checkbox function
+function checkBox(key, value, el) {
+    console.log("key ", key);
+    console.log("value ", value);
+    console.log("el ", el);
+    if(key == 1 && el.checked) {
+        checkBoxArr.push(value);
+    } else if(key == 2 && el.checked) {
+        checkBoxArr.push(value);
+    } else if(key == 1 && !el.checked) {
+        checkBoxArr.filter(item => item != value)
+    } else if(key == 2 && !el.checked) {
+        checkBoxArr.filter(item => item != value)
+    }
+    console.log("checkBoxArr ", checkBoxArr);
+}
+// submit button click
 function formSubmitClick() {
+    // cust name
     var customerName = document.getElementById('name').value
     var nameError = document.getElementById("nameErrorDiv")
     if (customerName == "") {
@@ -19,7 +37,7 @@ function formSubmitClick() {
     else {
         nameError.classList.add('hideElement');
     }
-
+    // cust pass
     var customerPassword = document.getElementById('password').value;
     var passError = document.getElementById("passErrorDiv");
     if (customerPassword == "") {
@@ -28,7 +46,7 @@ function formSubmitClick() {
     else {
         passError.classList.add("hideElement")
     }
-
+    // cust email
     var customerEmail = document.getElementById("mail").value;
     var customerMailId = document.getElementById("mailErrorDiv")
     if (customerEmail == "") {
@@ -37,9 +55,7 @@ function formSubmitClick() {
     else { 
         customerMailId.classList.add('hideElement') 
     }
-
-    var male = document.getElementById("genderMale").value;
-    var female = document.getElementById("genderFemale").value;
+    // gender
     var genderError = document.getElementById("genderErrorDiv")
     if (!document.getElementById("genderFemale").checked && !document.getElementById("genderMale").checked) {
         genderError.classList.remove("hideElement")
@@ -47,8 +63,7 @@ function formSubmitClick() {
     else {
         genderError.classList.add("hideElement")
     }
-
-
+    // qualification
     var Degree = document.getElementById("Degree").value;
     var degreeError = document.getElementById("degreeErrorDiv")
     if (Degree == "") {
@@ -72,7 +87,6 @@ function formSubmitClick() {
     var hobbiesError = document.getElementById("hobbiesError")
     if (!document.getElementById("rbooks").checked && !document.getElementById("pchess").checked) {
         hobbiesError.classList.remove("hideElement")
-
     }
 
     var address = document.getElementById("text").value
@@ -92,15 +106,22 @@ function formSubmitClick() {
     else {
         resumeError.classList.add("hideElement")
     }
+    var checkedGender = '';
+    if(document.getElementById("genderFemale").checked) {
+        checkedGender = document.getElementById("genderFemale").value
+    } else if(document.getElementById("genderMale").checked) {
+        checkedGender = document.getElementById("genderMale").value
+    }
     formObj.name = document.getElementById('name').value;
     formObj.password = customerPassword;
     formObj.email = customerEmail;
-    formObj.gender = male;
-    formObj.gender = female;
+    formObj.gender = checkedGender;
     formObj.degree = Degree;
     formObj.engineering = Engineering;
     formObj.address = address;
     formObj.resume = resume;
 
-
+    console.log("formObj ", formObj);
 }
+
+
