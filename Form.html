@@ -16,17 +16,21 @@
         <form action="action_pagr.php" autocomplete="on"></form>
         <label for="Name">Name :</label>
         <input type="text" id="name" for="Name" value="" placeholder="Enter your Name Here" required>
-        <div id="nameErrorDiv" class="hideElement"> Please fill the name</div><br><br>
+        <div id="nameErrorDiv" class="hideElement" style="color: red;"> Please fill the name</div><br>
         <label for="Name">Password :</label>
         <input type="text" id="password" for="Password" value="" placeholder="Enter your Password Here" required>
-        <div id="passErrorDiv" class="hideElement">Please create your password</div><br><br>
+        <div id="passErrorDiv" class="hideElement">Please create your password</div><br>
         <label for="Name">E-mail Id :</label>
-        <input type="text" id="mail" for="Mail" value="" placeholder="Enter your E-mail Here" required><br><br>
-        <label for="Gender">Gender :</label>
+        <input type="text" id="mail" for="Mail" value="" placeholder="Enter your E-mail Here" required>
+        <div id="mailErrorDiv" class="hideElement">Please enter you mail Id</div>
+        <br><br>
+        <label for="gender">Gender :</label>
         <input type="radio" id="genderMale" name="gender" value="Male">
         <label for="male">Male</label>
         <input type="radio" id="genderFemale" name="gender" value="Female">
-        <label for="female">Female</label><br><br>
+        <label for="female">Female</label>
+        <div id="genderErrorDiv" class="hideElement">Please select your gender</div>
+        <br><br>
         <h1>Educational Qualification</h1><br>
         <label for="Degree">Degree :</label>
         <select id="Degree" name="Degree" required="">
@@ -38,7 +42,9 @@
             <option value="B.Arch">B.Arch</option>
             <option value="Degree">Degree</option>
             <option value="" Selected>Please select</option>
-        </select><br><br>
+        </select>
+        <div id="degreeErrorDiv" class="hideElement">Please Select your Degree</div>
+        <br><br>
         <label for="Engineering">Engineering :</label>
         <select id="Engineering" name="Engineering">
             <option value="Mechanical">Mechanical</option>
@@ -48,18 +54,24 @@
             <option value="Software">Software</option>
             <option value="Informational Tech">Information Tech</option>
             <option value="" selected>please Select</option>
-        </select><br><br>
+        </select>
+        <div id="engineerErrorDiv" class="hideElement">Please Select your stream!</div>
+        <br><br>
         <label for="Hobbies">Hobbies :</label>
         <input type="checkbox" id="pchess" name="Hobbies" value="pchess">
         <label for="pchess">Playing Chess</label>
         <input type="checkbox" id="rbooks" name="Hobbies" value="rbooks">
-        <label for="pchess">Reading Books</label><br><br>
+        <label for="pchess">Reading Books</label>
+        <div id="hobbiesError" class="hideElement">Please choose your hobbies!</div>
+        <br><br>
 
         <h1>Address</h1><br><br>
-        <textarea name="Address" id="text" style="width:30vw height 50vw"></textarea><br><br>
+        <textarea name="Address" id="text" style="width:30vw height 50vw"></textarea>
+        <div id="addressErrorDiv" class="hideElement">Please fill your data here!</div><br><br>
 
         <label for="myfile">Attach Resume :</label>
-        <input type="file" id="myfile" name="myfile"><br><br>
+        <input type="file" id="myfile" name="myfile">
+        <div id="resumeErrorDiv" class="hideElement">Please attach your resume!</div><br><br>
 
 
         <button class="submit" onclick="formSubmitClick()">Submit</button>

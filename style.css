@@ -5,6 +5,7 @@
 }
 .hideElement {
     display: none;
+    color: red;
 }
 .showElement {
     display: block;
