@@ -3,13 +3,15 @@
     padding: opx;
     box-sizing: border-box;
 }
+
 .hideElement {
     display: none;
-    color: red;
 }
+
 .showElement {
     display: block;
 }
+
 h1 {
     text-decoration: bold;
     color: red
@@ -39,8 +41,21 @@ h1 {
     color: #cbff65;
 }
 
-#name,#password{
+#name,
+#password {
     border-radius: 5px;
     width: 20vw;
     height: 2vw;
+}
+
+#nameErrorDiv,
+#passErrorDiv,
+#mailErrorDiv,
+#genderErrorDiv,
+#degreeErrorDiv,
+#engineerErrorDiv,
+#addressErrorDiv,
+#resumeErrorDiv,
+#hobbiesError {
+    color: red;
 }

@@ -15,8 +15,8 @@
 
         <form action="action_pagr.php" autocomplete="on"></form>
         <label for="Name">Name :</label>
-        <input type="text" id="name" for="Name" value="" placeholder="Enter your Name Here" required>
-        <div id="nameErrorDiv" class="hideElement" style="color: red;"> Please fill the name</div><br>
+        <input type="text" id="name" for="Name" value="" placeholder="Enter your Name Here" required><br>
+        <div id="nameErrorDiv" class="hideElement" style="color: red;">Please fill the name</div>
         <label for="Name">Password :</label>
         <input type="text" id="password" for="Password" value="" placeholder="Enter your Password Here" required>
         <div id="passErrorDiv" class="hideElement">Please create your password</div><br>
@@ -34,6 +34,7 @@
         <h1>Educational Qualification</h1><br>
         <label for="Degree">Degree :</label>
         <select id="Degree" name="Degree" required="">
+            <option value="" Selected>Please select</option>
             <option value="B.tech">B.Tech</option>
             <option value="B.SC">B.SC</option>
             <option value="B.Com">B.Com</option>
@@ -41,19 +42,18 @@
             <option value="B.E">B.E</option>
             <option value="B.Arch">B.Arch</option>
             <option value="Degree">Degree</option>
-            <option value="" Selected>Please select</option>
         </select>
         <div id="degreeErrorDiv" class="hideElement">Please Select your Degree</div>
         <br><br>
         <label for="Engineering">Engineering :</label>
         <select id="Engineering" name="Engineering">
+            <option value="" selected>please Select</option>
             <option value="Mechanical">Mechanical</option>
             <option value="Electrical">Electrical</option>
             <option value="Civil">Civil</option>
             <option value="Electronics">Electronics</option>
             <option value="Software">Software</option>
             <option value="Informational Tech">Information Tech</option>
-            <option value="" selected>please Select</option>
         </select>
         <div id="engineerErrorDiv" class="hideElement">Please Select your stream!</div>
         <br><br>

@@ -37,7 +37,7 @@ function formSubmitClick() {
     else {
         nameError.classList.add('hideElement');
     }
-    // cust pass
+    // customer pass
     var customerPassword = document.getElementById('password').value;
     var passError = document.getElementById("passErrorDiv");
     if (customerPassword == "") {
@@ -46,7 +46,7 @@ function formSubmitClick() {
     else {
         passError.classList.add("hideElement")
     }
-    // cust email
+    // customer email
     var customerEmail = document.getElementById("mail").value;
     var customerMailId = document.getElementById("mailErrorDiv")
     if (customerEmail == "") {
@@ -63,7 +63,7 @@ function formSubmitClick() {
     else {
         genderError.classList.add("hideElement")
     }
-    // qualification
+    // customer qualification
     var Degree = document.getElementById("Degree").value;
     var degreeError = document.getElementById("degreeErrorDiv")
     if (Degree == "") {
@@ -72,7 +72,7 @@ function formSubmitClick() {
     else { 
         degreeError.classList.add("hideElement") 
     }
-
+      //customer engg. stream
     var Engineering = document.getElementById("Engineering").value;
     var engineerError = document.getElementById("engineerErrorDiv");
     if (Engineering == "") {
@@ -81,14 +81,14 @@ function formSubmitClick() {
     else { 
         engineerError.classList.add("hideElement") 
     }
-
+      //customer hobbies
     var ReadingBooks = document.getElementById("rbooks").value
     var playingChess = document.getElementById("pchess").value
     var hobbiesError = document.getElementById("hobbiesError")
     if (!document.getElementById("rbooks").checked && !document.getElementById("pchess").checked) {
         hobbiesError.classList.remove("hideElement")
     }
-
+      //customer address
     var address = document.getElementById("text").value
     var addressError = document.getElementById("addressErrorDiv")
     if (address == '') {
@@ -97,7 +97,7 @@ function formSubmitClick() {
     else { 
         addressError.classList.add("hideElement") 
     }
-
+      //customer resume
     var resume = document.getElementById("myfile").value;
     var resumeError = document.getElementById("resumeErrorDiv");
     if (resume == '') {
@@ -112,6 +112,7 @@ function formSubmitClick() {
     } else if(document.getElementById("genderMale").checked) {
         checkedGender = document.getElementById("genderMale").value
     }
+    //object for data
     formObj.name = document.getElementById('name').value;
     formObj.password = customerPassword;
     formObj.email = customerEmail;
